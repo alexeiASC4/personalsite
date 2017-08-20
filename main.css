@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Plaster');
+
+
+.jumbotron{
+    text-align:center;
+    font-family: 'Permanent Marker', cursive;
+    
+    color:white; 
+   
+}
+.first{
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    background-color: #E5E5FF;
+    padding-top:50px;
+    text-align: center;
+    margin-bottom: 100px;
+    color:black;
+}
+.first1{
+    
+    background-image: url("https://68.media.tumblr.com/c6e37502d4da22a4761c9f3263a43c32/tumblr_nj76ot5V451tcuj64o1_400.gif");
+    color:#E5E5FF;
+    padding-top:50px;
+    padding-bottom:50px;
+     margin-top:-50px; 
+    margin-bottom: -93px;  
+    background-size: cover;
+    text-align: center;
+    padding-bottom:100px;
+
+}
+.second{
+     
+    padding-top:100px;
+    background-color: #E5E5FF;
+    color:black;
+    
+    
+}
+
+
+html{
+    background-color: #E5E5FF;
+}
+h3{
+    padding-top:50px;
+}
+
+
+
+.first2{
+    padding-bottom: 50px;
+    color:black;
+}
+.caption{
+    background-color:#E5E5FF;
+    border: 10px solid #E5E5FF;
+    border-radius: 10px;
+}
