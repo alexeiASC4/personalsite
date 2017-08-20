@@ -47,6 +47,8 @@ var bullets = [];
 function setup(){
     createCanvas(600,600);
     background('black');
+    textSize(24);
+    text("Use left arrow, right arrow, and the spacebar to play",25,300);
     
               
     
@@ -117,7 +119,8 @@ function draw(){
         bullets[c][1]-=5;
         rect(bullets[c][0],bullets[c][1],5,5);
     }
-   if (something<-5){
+   if (something<-3){
+       textSize(32);
        text("You Win!",150,200);
         noLoop();
    }
