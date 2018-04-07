@@ -1,44 +1,55 @@
 
-var x = 0;
-var y = 0;
-var x2 = 0;
-var y2 = 0;
-var x3 = 0;
-var score = 0;
-var iteration = 0;
+var x =0;
+var y =0;
+var x2 =0;
+var y2= 0;
+var x3=200;
+var score=0;
+var iteration=0;
+var bcolor = 'green';
 
 
-function setup() {
-    createCanvas(600, 600);
-    background('green');
+
+function setup(){
+    createCanvas(600,600);
+    background(bcolor);
     textSize(36);
-    text("Welcome to Pong!", 150, 100);
+    text("Welcome to Pong!",150,100);
     textSize(24);
     text("Use left and right arrow keys to move paddle", 60, 150);
     textSize(16);
-    text('Score: ', 450, 50);
-
-
-
-}
-
-function draw() {
-    setup();
+    text('Score: ',450,50);
     text(score, 500, 50);
 
+    
+}
+
+function draw(){
+    setup();
+    
+    
+    paddleControls();
+    
+    pongBall();
+    
+}
+
+function paddleControls(){
     if (keyIsDown(LEFT_ARROW)) {
         x3 -= 10;
     }
     if (keyIsDown(RIGHT_ARROW)) {
         x3 += 10;
     }
+}
 
-    if (x <= 25) {
+function pongBall(){
+    if (x <= 10) {
         x2 = 2;
 
     }
-    else if (x >= 575) {
-        x2 = -9;
+    else if (x >= 599) {
+        x2 = -7;
     }
     if (y <= 10) {
         y2 = 5;
@@ -48,16 +59,12 @@ function draw() {
         y2 = -11;
 
         score++;
-
     }
     else if (y >= 575) {
-        y2 = 0;
-        x2 = 0;
-        textSize(48);
-        text("GAME OVER!", 150, 300);
-        textSize(24);
-        text("Refresh page to restart!", 170, 350);
-        noLoop();
+        bcolor = 'gray';
+        setup();
+        endGame();
+        
 
     }
 
@@ -66,19 +73,17 @@ function draw() {
 
     rect(x3, 575, 200, 5);
     ellipse(x, y, 50, 50);
-
 }
-// function doubleClicked(){
-//     clear();
-//     var x = 0;
-//     var y = 0;
-//     var x2 = 0;
-//     var y2 = 0;
-//     var x3 = 0;
-//     var score = 0;
-//     return false;
-// }
-// function restart(){
-//      doubleClicked();
-//      redraw();
-// }
+
+function endGame(){
+    y2 = 0;
+    x2 = 0;
+    textSize(84);
+    text("GAME OVER!", 30, 300);
+    textSize(24);
+    text("Refresh page to restart!", 170, 350);
+    
+    noLoop();
+    
+}
+
