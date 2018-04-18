@@ -5,7 +5,7 @@ var x2 =0;
 var y2= 0;
 var x3=200;
 var score=0;
-var iteration=0;
+
 var bcolor = 'green';
 
 
