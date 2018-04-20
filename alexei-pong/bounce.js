@@ -5,7 +5,6 @@ var x2 =0;
 var y2= 0;
 var x3=200;
 var score=0;
-
 var bcolor = 'green';
 
 
@@ -86,4 +85,4 @@ function endGame(){
     noLoop();
     
 }
-
+// Some of the functions used are from p5.js, a JavaScript library.
